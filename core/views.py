@@ -17,3 +17,11 @@ def index(request):
 
 def contato(request):
     return render(request, 'contato.html')
+
+
+def produto(request, pk):
+    _produto_ = Produto.objects.get(id=pk)
+    context = {
+        'produto': _produto_
+    }
+    return render(request, 'produto.html', context)

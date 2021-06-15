@@ -1,8 +1,13 @@
 body {
-    background-color: #171601;
+    background-color: #262378;
     color: #F2B80A;
 }
 
 a {
-    color: #E82209;
+    color: #ffffff;
+}
+
+#DjangoImage{
+    width:  250px;
+    heigth: 250px;
 }

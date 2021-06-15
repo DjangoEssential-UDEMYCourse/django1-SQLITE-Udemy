@@ -8,22 +8,25 @@
     <link rel="stylesheet" href="{% static  'css/style.css' %}"/>
 </head>
 <body>
-    <h1>INDEX</h1>
-    <span><h2>{{ curso }}</h2></span>
-    <table>
-        <thead>
-            <th>Produto</th>
-            <th>Preco</th>
-        </thead>
-        <tbody>
-            {% for produto in produtos %}
-                <tr>
-                    <td><a href="{% url 'produto' produto.pk %}">{{ produto.nome }}</a></td>
-                    <td>{{ produto.preco }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <center>
+        <img  id="DjangoImage" src="{% static 'img/django.png' %}" />
+        <h1>INDEX</h1>
+        <span><h2>{{ curso }}</h2></span>
 
+        <table>
+            <thead>
+                <th>Produto</th>
+                <th>Preco</th>
+            </thead>
+            <tbody>
+                {% for produto in produtos %}
+                    <tr>
+                        <td><a href="{% url 'produto' produto.pk %}">{{ produto.nome }}</a></td>
+                        <td>{{ produto.preco }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </center>
 </body>
 </html>
